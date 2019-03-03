@@ -57,7 +57,7 @@ class Client(object):
         self.logger.debug('%s %s', 'GET', url)
         self.logger.debug('Headers: %s', headers)
 
-        res = requests.get(self.endpoint + method,
+        res = requests.get(url,
                            headers=headers, timeout=self.timeout)
         self.xboxapi_response_error(res)
         self.logger.debug('Response: %s', res.json())
